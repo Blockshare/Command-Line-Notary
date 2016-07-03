@@ -15,7 +15,7 @@ def cli(raw_msg):
     requests = BitTransferRequests(wallet)
 
     # purchase the bitcoin payable endpoint
-    response = requests.get('http://localhost:5000/write-message?message={}'.format(raw_msg))
+    response = requests.get('http://10.244.107.98:3003/write-message?message={}'.format(raw_msg))
 
     # print out the transaction
     click.echo("Transaction: {}".format(response.text))
