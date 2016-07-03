@@ -1,14 +1,14 @@
 from setuptools import setup
 
 setup(
-    name='notary',
+    name='notarize',
     version='0.1',
-    py_modules=['notary'],
+    py_modules=['notarize'],
     install_requires=[
         'Click',
     ],
     entry_points='''
         [console_scripts]
-        notary=notary:cli
+        notarize=notarize:cli
     ''',
 )
