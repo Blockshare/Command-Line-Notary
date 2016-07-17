@@ -1,0 +1,7 @@
+notarize.py
+notarize.egg-info/PKG-INFO
+notarize.egg-info/SOURCES.txt
+notarize.egg-info/dependency_links.txt
+notarize.egg-info/entry_points.txt
+notarize.egg-info/requires.txt
+notarize.egg-info/top_level.txt
