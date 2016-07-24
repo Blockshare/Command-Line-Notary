@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        notary21=notary21:cli
+    

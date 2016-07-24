@@ -18,8 +18,8 @@ def cli(raw_msg):
     response = requests.get('http://10.244.107.98:3003/write-message?message={}'.format(raw_msg))
 
     # print out the transaction
-    click.echo("Transaction: {}".format(response.text))
-    click.echo("View it live at https://live.blockcypher.com/btc/tx/{}".format(response.text))
+    click.echo("Transaction ID Number: {}".format(response.text))
+    click.echo("Find your notary at https://live.blockcypher.com/btc/tx/{}".format(response.text))
 
 if __name__ == '__main__':
     if len(sys.argv) != 2:

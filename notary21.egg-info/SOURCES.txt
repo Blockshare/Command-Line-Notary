@@ -1,0 +1,7 @@
+notary21.py
+notary21.egg-info/PKG-INFO
+notary21.egg-info/SOURCES.txt
+notary21.egg-info/dependency_links.txt
+notary21.egg-info/entry_points.txt
+notary21.egg-info/requires.txt
+notary21.egg-info/top_level.txt

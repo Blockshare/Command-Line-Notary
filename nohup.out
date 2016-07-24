@@ -24,3 +24,88 @@ Exception: No UTXOs available to pay for the transaction.
  * Running on http://0.0.0.0:3003/ (Press CTRL+C to quit)
 10.244.107.98 - - [05/Jul/2016 23:54:03] "GET /write-message?message=648a6a6ffffdaa0badb23b8baf90b6168dd16b3a HTTP/1.1" 402 -
 10.244.107.98 - - [05/Jul/2016 23:54:04] "GET /write-message?message=648a6a6ffffdaa0badb23b8baf90b6168dd16b3a HTTP/1.1" 200 -
+10.244.107.98 - - [17/Jul/2016 14:25:17] "GET /write-message?message=https://contextformdigital.bandcamp.com/ HTTP/1.1" 402 -
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1988, in wsgi_app
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1641, in full_dispatch_request
+    reraise(exc_type, exc_value, tb)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1544, in handle_user_exception
+    :class:`unicode`        a response object is created with the
+  File "/usr/local/lib/python3.4/dist-packages/flask/_compat.py", line 33, in reraise
+    raise value
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1639, in full_dispatch_request
+    # otherwise we raise it from here.
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1625, in dispatch_request
+    def handle_url_build_error(self, error, endpoint, values):
+  File "/usr/local/lib/python3.4/dist-packages/two1/bitserv/flask/decorator.py", line 104, in _fn
+    return fn(*fn_args, **fn_kwargs)
+  File "notary-server.py", line 49, in write_message
+    raise Exception('No UTXOs available to pay for the transaction.')
+Exception: No UTXOs available to pay for the transaction.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "notary-server.py", line 85, in <module>
+    app.run(host='0.0.0.0', port=3003)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 843, in run
+    .. versionadded:: 0.7
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 694, in run_simple
+    inner()
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 659, in inner
+    srv.serve_forever()
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 499, in serve_forever
+    HTTPServer.serve_forever(self)
+  File "/usr/lib/python3.4/socketserver.py", line 238, in serve_forever
+    self._handle_request_noblock()
+  File "/usr/lib/python3.4/socketserver.py", line 307, in _handle_request_noblock
+    self.handle_error(request, client_address)
+  File "/usr/lib/python3.4/socketserver.py", line 305, in _handle_request_noblock
+    self.process_request(request, client_address)
+  File "/usr/lib/python3.4/socketserver.py", line 331, in process_request
+    self.finish_request(request, client_address)
+  File "/usr/lib/python3.4/socketserver.py", line 344, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+  File "/usr/lib/python3.4/socketserver.py", line 673, in __init__
+    self.handle()
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 216, in handle
+    rv = BaseHTTPRequestHandler.handle(self)
+  File "/usr/lib/python3.4/http/server.py", line 398, in handle
+    self.handle_one_request()
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 251, in handle_one_request
+    return self.run_wsgi()
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 193, in run_wsgi
+    execute(self.server.app)
+  File "/usr/local/lib/python3.4/dist-packages/werkzeug/serving.py", line 181, in execute
+    application_iter = app(environ, start_response)
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 2000, in __call__
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1991, in wsgi_app
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1571, in handle_exception
+    # some extra logic involved when creating these objects with
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 1584, in log_exception
+    if headers:
+  File "/usr/local/lib/python3.4/dist-packages/flask/app.py", line 624, in logger
+    return os.path.join(package_path, 'instance')
+  File "/usr/local/lib/python3.4/dist-packages/flask/logging.py", line 38, in create_logger
+    handler.setFormatter(Formatter(app.debug_log_format))
+AttributeError: 'Flask' object has no attribute 'debug_log_format'
+ * Running on http://0.0.0.0:3003/ (Press CTRL+C to quit)
+10.244.107.98 - - [17/Jul/2016 14:28:42] "GET /write-message?message=https://contextformdigital.bandcamp.com/ HTTP/1.1" 402 -
+10.244.107.98 - - [17/Jul/2016 14:28:44] "GET /write-message?message=https://contextformdigital.bandcamp.com/ HTTP/1.1" 200 -
+10.244.107.98 - - [24/Jul/2016 15:25:53] "GET /write-message?message=A%20message%20on%20the%20Blockchain HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:25:54] "GET /write-message?message=A%20message%20on%20the%20Blockchain HTTP/1.1" 200 -
+10.244.107.98 - - [24/Jul/2016 15:37:58] "GET /write-message?message=did%20this%20work? HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:37:58] "GET /write-message?message=did%20this%20work? HTTP/1.1" 500 -
+10.244.107.98 - - [24/Jul/2016 15:39:45] "GET /write-message?message=hello%20world HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:39:46] "GET /write-message?message=hello%20world HTTP/1.1" 500 -
+10.244.107.98 - - [24/Jul/2016 15:40:21] "GET /write-message?message=hello HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:40:22] "GET /write-message?message=hello HTTP/1.1" 500 -
+10.244.107.98 - - [24/Jul/2016 15:45:15] "GET /write-message?message=hello HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:45:16] "GET /write-message?message=hello HTTP/1.1" 500 -
+10.244.107.98 - - [24/Jul/2016 15:46:30] "GET /write-message?message=Hello%20World HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:46:31] "GET /write-message?message=Hello%20World HTTP/1.1" 500 -
+10.244.107.98 - - [24/Jul/2016 15:52:24] "GET /write-message?message=hello HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:52:25] "GET /write-message?message=hello HTTP/1.1" 500 -
+ * Running on http://0.0.0.0:3003/ (Press CTRL+C to quit)
+10.244.107.98 - - [24/Jul/2016 15:53:22] "GET /write-message?message=hello%20world HTTP/1.1" 402 -
+10.244.107.98 - - [24/Jul/2016 15:53:24] "GET /write-message?message=hello%20world HTTP/1.1" 200 -
